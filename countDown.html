@@ -53,6 +53,13 @@
 				
                 
 			</div>
+            <script>
+                let today1 = new Date()
+                let remainHour = 23-today1.getHours()
+                let remainMinute = 60-today1.getMinutes()
+                let dayP = document.querySelector(".day p")
+                dayP.textContent = `今天只剩下${remainHour}时，${remainMinute}分钟！`
+            </script>
 			<div class="life">
                 <div class="content">
                     <h2>Life</h2>
