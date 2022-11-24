@@ -2,3 +2,33 @@
     padding: 0;
     margin: 0;
 }
+@shadow:rgba(0,0,0,0.05);
+body{
+    background-color: #eff0f4;
+    .out-wrapper{
+        position: relative;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        padding: 50px 0;
+        gap: 40px 40px;  //gap设置行间隙和列间隙，只写一个都设置
+        flex-wrap: wrap;
+
+        div{
+            position: relative;
+            width: 350px;
+            height: 350px;
+            // background-color: #aaa;
+            box-shadow: inset 28px 20px 20px @shadow,
+            25px 35px 28px @shadow,25px 30px 38px @shadow,
+            inset -20px -20px 25px rgba(255, 255, 255, 0.9);
+            &.day{
+                border-radius: 26% 74% 35% 65% / 55% 56% 44% 45% ;
+                order: -1;  //order默认值为0，越小的就在越前面
+            }
+        }
+        
+
+
+    }
+}
