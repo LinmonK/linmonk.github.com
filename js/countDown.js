@@ -45,7 +45,7 @@ lifeP.textContent = `人生只剩下${remainDays}天，
 
 setTimeout(function dayTimeout(){
     let remainHour = 23-today.getHours()
-    let remainMinute = 60-today.getMinutes()
+    let remainMinute = 59-today.getMinutes()
     let dayP = document.querySelector(".day p")
     dayP.textContent = `今天只剩下${remainHour}时，${remainMinute}分钟！`
     console.log(remainHour,remainMinute)
