@@ -10,7 +10,7 @@ if((year%4==0 && year%100 != 0)||year % 400 == 0){
 }
 
 let currentDays = monthDays[month]
-let cdDatePercent = (day/currentDays).toFixed(3)*100+"%"//toFIxed 将number类型保留n位小数四舍五入
+let cdDatePercent = ((day/currentDays)*100).toFixed(3)+"%"//toFIxed 将number类型保留n位小数四舍五入
 let countDownDate = currentDays - day
 let monthP = document.querySelector(".month p")
 monthP.textContent = `这个月只剩下${countDownDate}天，
@@ -25,11 +25,12 @@ for(let i = 0;i < month;i ++){
 lastDays += day
 let currentYearDays = monthDays[1] == 28?365:366
 let cdYearDays = currentYearDays - lastDays
-let cdYearPercent = (lastDays/currentYearDays).toFixed(3)*100+"%"
+let cdYearPercent = ((lastDays/currentYearDays)*100).toFixed(1)+"%"
 
 let yearP = document.querySelector(".year p")
 yearP.textContent = `今年只剩下${cdYearDays}天，
                         已经过去了${cdYearPercent}的时间!`
+console.log(cdYearPercent)
 
 
 /* 再完成第四个功能吧，获取人生还剩下多少天（考虑之后通过设置生日和预期寿命来修改）*/
@@ -37,7 +38,7 @@ yearP.textContent = `今年只剩下${cdYearDays}天，
 let currentAge = 19
 let prospectiveAge = 80
 let remainDays = (prospectiveAge-currentAge)*365
-let remainDaysPercent = (currentAge/prospectiveAge).toFixed(3)*100+"%"
+let remainDaysPercent = ((currentAge/prospectiveAge)*100).toFixed(3)+"%"
 let lifeP = document.querySelector(".life p")
 lifeP.textContent = `人生只剩下${remainDays}天，
                         已经过去了${remainDaysPercent}的时间!`
