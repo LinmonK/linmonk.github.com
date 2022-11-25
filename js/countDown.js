@@ -10,7 +10,7 @@ if((year%4==0 && year%100 != 0)||year % 400 == 0){
 }
 
 let currentDays = monthDays[month]
-let cdDatePercent = ((day/currentDays)*100).toFixed(3)+"%"//toFIxed 将number类型保留n位小数四舍五入
+let cdDatePercent = ((day/currentDays)*100).toFixed(1)+"%"//toFIxed 将number类型保留n位小数四舍五入
 let countDownDate = currentDays - day
 let monthP = document.querySelector(".month p")
 monthP.textContent = `这个月只剩下${countDownDate}天，
@@ -38,7 +38,7 @@ console.log(cdYearPercent)
 let currentAge = 19
 let prospectiveAge = 80
 let remainDays = (prospectiveAge-currentAge)*365
-let remainDaysPercent = ((currentAge/prospectiveAge)*100).toFixed(3)+"%"
+let remainDaysPercent = ((currentAge/prospectiveAge)*100).toFixed(1)+"%"
 let lifeP = document.querySelector(".life p")
 lifeP.textContent = `人生只剩下${remainDays}天，
                         已经过去了${remainDaysPercent}的时间!`
