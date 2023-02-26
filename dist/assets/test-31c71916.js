@@ -1,0 +1,1 @@
+import{o as n,c as s}from"./index-5f33ed14.js";const _=(e,t)=>{const o=e.__vccOpts||e;for(const[c,r]of t)o[c]=r;return o},a={};function l(e,t){return n(),s("h1",null,"Hello Vue Router!")}const u=_(a,[["render",l]]);export{u as default};
