@@ -1,80 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>countDown</title>
-		<link rel="stylesheet" href="./css/countDown.css" />
-	</head>
-	<body>
-        <script defer src="./js/countDown.js"></script>
-        <!-- 正常来说，浏览器会顺序执行html元素，因此如果将script写在html主体元素
-        前面的话，浏览器会先执行提供的js代码，等执行完毕后才会进一步加载DOM。
-        这就导致了许多问题 1.js代码无法获取到想要的DOM节点 2.js代码的下载会阻塞页面加载
-        如果将script代码写在最后面，可以解决两个问题，但是由于js代码在最后面，无法提前下载
-        这时候使用defer就可以在碰到script标签后立即下载js代码，然后在页面加载完毕的时候才会
-        运行，并且保持defer的script标签运行的相对顺序 -->
-        <h1 class="head">各种倒计时</h1>
-		<div class="out-wrapper">
-			<div class="month">
-                <div class="content">
-                    <h2>Month</h2>
-				<p>
-
-				</p>
-                
-                    <a href="#">Read More</a>
-                </div>
-				
-                
-			</div>
-			<div class="year">
-                <div class="content">
-                    <h2>Year</h2>
-				<p>
-					
-				</p>
-                
-                    <a href="#">Read More</a>
-                </div>
-				
-                
-			</div>
-			<div class="day">
-                <div class="content">
-                    <h2>Day</h2>
-				<p>
-					
-				</p>
-                
-                    <a href="#">Read More</a>
-                </div>
-				
-                
-			</div>
-            <script>
-                let today1 = new Date()
-                let remainHour = 23-today1.getHours()
-                let remainMinute = 60-today1.getMinutes()
-                let dayP = document.querySelector(".day p")
-                dayP.textContent = `今天只剩下${remainHour}时，${remainMinute}分钟！`
-            </script>
-			<div class="life">
-                <div class="content">
-                    <h2>Life</h2>
-				<p>
-					
-				</p>
-                
-                    <a href="#">Read More</a>
-                </div>
-				
-                
-			</div>
-		</div>
-        <script>
-            // this is test node!
-        </script>
-	</body>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+   
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
 </html>
